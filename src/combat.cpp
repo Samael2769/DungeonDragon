@@ -16,6 +16,36 @@ static void print_stats(ICharacter *p)
     std::cout << "-----------------------------------" << std::endl;
 }
 
+static void do_special(ICharacter *p, ICharacter *p2)
+{
+    while (1) {
+        std::cout << "------- Chose your skill -------" << std::endl;
+        std::string skill;
+        std::getline(std::cin, skill);
+        int nb = std::stoi(skill);
+
+        switch (nb) {
+            case 1:
+                p2->damage(p->skill1());
+                break;
+            case 2:
+                p2->damage(p->skill2());
+                break;
+            case 3:
+                p2->damage(p->skill3());
+                break;
+            case 4:
+                p2->damage(p->skill4());
+                break;
+            default:
+                break;
+        }
+        if (nb < 1 || nb > 4)
+            continue;
+        break;
+    }
+}
+
 static void chose_attack(ICharacter *p, ICharacter *p2)
 {
     std::string attack;
@@ -25,7 +55,7 @@ static void chose_attack(ICharacter *p, ICharacter *p2)
         if (attack == "attack")
             p2->damage(p->attack());
         else if (attack == "special")
-                p2->damage(p->special());
+                do_special(p, p2);
         else if (attack == "rest")
             p->rest();
         else if (attack == "smite")
@@ -40,7 +70,7 @@ static void mini_ia(ICharacter *p1, ICharacter *p2)
 {
     std::cout << "-----------" << p2->getName() << " Attack" << "----------" << std::endl;
     if (p2->getPower() > 50)
-        p1->damage(p2->special());
+        p1->damage(p2->skill1());
     else if (p2->getPower() > 20)
         p1->damage(p2->attack());
     else
