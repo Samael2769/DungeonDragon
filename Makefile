@@ -14,16 +14,17 @@ LIB_DIR	=	lib/sm_libc/
 SRC_FILES	=\
 
 SRC_FILES_MAIN	=	main.cpp\
-					Enchanter.cpp\
-					HealthPotion.cpp\
-					Knight.cpp\
-					Paladin.cpp\
-					Peasant.cpp\
-					PoisonPotion.cpp\
-					PowerPotion.cpp\
-					Priest.cpp\
-					Dragon.cpp\
-					combat.cpp\
+					1_Characters/Enchanter.cpp\
+					1_Characters/Knight.cpp\
+					1_Characters/Paladin.cpp\
+					1_Characters/Peasant.cpp\
+					1_Characters/Priest.cpp\
+					2_Mobs/Dragon.cpp\
+					2_Mobs/Goblin.cpp\
+					3_Items/HealthPotion.cpp\
+					3_Items/PoisonPotion.cpp\
+					3_Items/PowerPotion.cpp\
+					4_Gameplay/combat.cpp\
 
 TEST_FILES	=\
 
@@ -41,7 +42,7 @@ OBJ_MAIN	=	$(SRC_MAIN:.cpp=.o)
 
 CFLAGS	=	-W -Wall -Wextra
 
-CPPFLAGS	=	-I./includes
+CPPFLAGS	=	-I./includes/1_Characters -I./includes/2_Mobs -I./includes/3_Items -I./includes/4_Gameplay
 
 LDFLAGS	=	-L./
 

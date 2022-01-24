@@ -8,6 +8,7 @@
 #include "ICharacter.hpp"
 #include <iostream>
 #include <iomanip>
+#include <random>
 
 static void print_stats(ICharacter *p)
 {
@@ -69,8 +70,24 @@ static void chose_attack(ICharacter *p, ICharacter *p2)
 static void mini_ia(ICharacter *p1, ICharacter *p2)
 {
     std::cout << "-----------" << p2->getName() << " Attack" << "----------" << std::endl;
+    int nb = random() % 4;
     if (p2->getPower() > 50)
-        p1->damage(p2->skill1());
+        switch (nb) {
+            case 1:
+                p1->damage(p2->skill1());
+                break;
+            case 2:
+                p1->damage(p2->skill2());
+                break;
+            case 3:
+                p1->damage(p2->skill3());
+                break;
+            case 4:
+                p1->damage(p2->skill4());
+                break;
+            default:
+                break;
+        }
     else if (p2->getPower() > 20)
         p1->damage(p2->attack());
     else

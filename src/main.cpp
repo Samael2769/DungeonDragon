@@ -17,6 +17,7 @@
 
 int main()
 {
+    srandom(time(NULL));
     ICharacter * enchanter = new Enchanter ("Gildas",  100);
     ICharacter * knight = new Knight ("Alpha", 50);
 
