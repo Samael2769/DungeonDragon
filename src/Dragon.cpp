@@ -7,7 +7,7 @@
 
 #include "Dragon.hpp"
 
-Dragon::Dragon()
+Dragon::Dragon() : _hp(1000), _power(250)
 {
 }
 
