@@ -5,7 +5,7 @@
 ## Makefile
 ##
 
-SRC_DIR	=	./
+SRC_DIR	=	./src/
 
 TEST_DIR	=	tests/
 
