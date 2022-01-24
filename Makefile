@@ -23,6 +23,7 @@ SRC_FILES_MAIN	=	main.cpp\
 					PowerPotion.cpp\
 					Priest.cpp\
 					Dragon.cpp\
+					combat.cpp\
 
 TEST_FILES	=\
 

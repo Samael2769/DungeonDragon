@@ -13,20 +13,15 @@
 #include "HealthPotion.hpp"
 #include "PoisonPotion.hpp"
 #include "PoisonPotion.hpp"
+#include "combat.hpp"
 
 int main()
 {
-    ICharacter * peasant = new Peasant (" Gildas ", 42) ;
-    PoisonPotion poison_potion ;
-    HealthPotion health_potion ;
-    IPotion & potion = health_potion ;
-    std :: cout << peasant->getName () << ": " << peasant -> getHp () << "HP , "
-    << peasant -> getPower () << " PP." << std :: endl ;
-    peasant -> drink ( poison_potion ) ;
-    std :: cout << peasant->getName () << ": " << peasant -> getHp () << "HP , "
-    << peasant -> getPower () << " PP." << std :: endl ;
-    peasant -> drink ( potion ) ;
-    std :: cout << peasant->getName () << ": " << peasant -> getHp () << "HP , "
-    << peasant -> getPower () << " PP." << std :: endl ;
-    delete peasant ;
+    ICharacter * peasant = new Peasant ("Gildas",  42);
+    ICharacter * knight = new Knight ("Alpha", 50);
+
+    std::cout << combat(knight, peasant) << std::endl;
+    delete peasant;
+    delete knight;
+    return 0;
 }
