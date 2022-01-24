@@ -27,6 +27,8 @@ class ICharacter {
         virtual const std::string &getName() const = 0;
         virtual int getPower() const = 0;
         virtual int getHp() const = 0;
+        virtual const int getMaxPower() const = 0;
+        virtual const int getMaxHp() const = 0;
         virtual void drink(const IPotion &potion) = 0;
         virtual void drink(const PoisonPotion &potion) = 0;
         virtual void drink(const HealthPotion &potion) = 0;

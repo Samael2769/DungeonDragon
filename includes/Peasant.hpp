@@ -13,7 +13,7 @@
 
 class Peasant : public ICharacter {
     public:
-        Peasant(const std::string &name, int power) : _power(power),  _hp(100), _name(name)
+        Peasant(const std::string &name, int power) : _power(power),  _hp(100), _maxPower(power), _maxHp(100), _name(name)
         {
             std::cout << _name << " goes for an adventure." << std::endl;
             if (_power > 100)
@@ -23,6 +23,8 @@ class Peasant : public ICharacter {
         const std::string &getName() const {return _name;}
         int getPower() const{return _power;}
         int getHp() const {return _hp;}
+        const int getMaxPower() const{return _maxPower;}
+        const int getMaxHp() const {return _maxHp;}
         
         virtual int attack();
         int skill1();
@@ -38,13 +40,15 @@ class Peasant : public ICharacter {
     protected:
     int _power;
     int _hp;
+    const int _maxPower;
+    const int _maxHp;
     const std::string &_name;
     private:
-        int _atkCost = 10;
-        int _atkDmg = 20;
-        int _skillCost[4] = {20, 30, 45, 70};
-        int _skillDmg[4] = {30, 50, 80, 120};
-        std::string _skillNames[4] = {"Knight Punch", "Impale", "Fury Slash", "Beheading"};
+        int _atkCost = 0;
+        int _atkDmg = 5;
+        int _skillCost[4] = {0, 30, 45, 70};
+        int _skillDmg[4] = {0, 50, 80, 120};
+        std::string _skillNames[4] = {"Think", "Impale", "Fury Slash", "Beheading"};
 };
 
 #endif /* !PEASANT_HPP_ */

@@ -17,9 +17,14 @@ class Dragon : public IMob {
 
         int getPower() const {return _power;}
         int getHp() const {return _hp;}
+        const int getMaxPower() const{return _maxPower;}
+        const int getMaxHp() const {return _maxHp;}
         
         int attack();
-        int special();
+        int skill1();
+        int skill2();
+        int skill3();
+        int skill4();
         void rest();
         void damage(int damage);
     protected:
@@ -29,6 +34,11 @@ class Dragon : public IMob {
         const int _maxPower;
         const std::string _race = "Dragon";
     private:
+        int _atkCost = 10;
+        int _atkDmg = 20;
+        int _skillCost[4] = {20, 30, 45, 70};
+        int _skillDmg[4] = {30, 50, 80, 120};
+        std::string _skillNames[4] = {"Knight Punch", "Dragon Breath", "Fury Slash", "Beheading"};
 };
 
 #endif /* !DRAGON_HPP_ */

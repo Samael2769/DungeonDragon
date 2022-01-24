@@ -37,7 +37,12 @@ int Dragon::attack()
     return dmg;
 }
 
-int Dragon::special()
+int Dragon::skill1()
+{
+    return 0;
+}
+
+int Dragon::skill2()
 {
     int cost = 130;
     int dmg = 90;
@@ -53,6 +58,16 @@ int Dragon::special()
     _power -= cost;
     cout << "You feel the heat on your face as the dragon breathes out a barrage of flames !!!" << endl;
     return dmg;
+}
+
+int Dragon::skill3()
+{
+    return 0;
+}
+
+int Dragon::skill4()
+{
+    return 0;
 }
 
 void Dragon::rest()
