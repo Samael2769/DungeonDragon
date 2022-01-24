@@ -23,6 +23,10 @@ class Knight : virtual public Peasant {
         virtual void rest();
     protected:
     private:
+        int _atk_cost = 10;
+        int _atk_dmg = 20;
+        int _special_costs[4] = {20, 30, 45, 70};
+        int _special_dmgs[4] = {0, 50, 0, 0};
 };
 
 #endif /* !KNIGHT_HPP_ */
