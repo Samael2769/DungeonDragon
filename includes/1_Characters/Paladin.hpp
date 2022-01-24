@@ -26,11 +26,11 @@ class Paladin : public Knight, public Priest{
         void rest() final {Priest::rest();}
     protected:
     private:
-        int _atkCost = 10;
-        int _atkDmg = 20;
-        int _skillCost[4] = {20, 30, 45, 70};
-        int _skillDmg[4] = {30, 50, 80, 120};
-        std::string _skillNames[4] = {"Knight Punch", "Impale", "Fury Slash", "Beheading"};
+        int _atkCost = 20;
+        int _atkDmg = 40;
+        int _skillCost[4] = {40, 60, 80, 100};
+        int _skillDmg[4] = {-65, 95, 140, 800};
+        std::string _skillNames[4] = {"Holy Light", "Holy Slash", "Holy impale", "Holy Smite"};
 };
 
 #endif /* !PALADIN_HPP_ */

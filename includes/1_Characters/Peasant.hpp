@@ -44,11 +44,11 @@ class Peasant : public ICharacter {
     const int _maxHp;
     const std::string &_name;
     private:
-        int _atkCost = 0;
+        int _atkCost = 1;
         int _atkDmg = 5;
-        int _skillCost[4] = {0, 30, 45, 70};
-        int _skillDmg[4] = {0, 50, 80, 120};
-        std::string _skillNames[4] = {"Think", "Impale", "Fury Slash", "Beheading"};
+        int _skillCost[4] = {1, 15, 35, 100};
+        int _skillDmg[4] = {0, 15, 40, 90};
+        std::string _skillNames[4] = {"Think", "Reckless Punch", "Fork Jab", "Cow Attack"};
 };
 
 #endif /* !PEASANT_HPP_ */

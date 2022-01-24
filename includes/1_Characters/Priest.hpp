@@ -20,6 +20,7 @@ class Priest : public Enchanter{
         {
             std::cout << _name << " finds peace." << std::endl;
         }
+
         int skill1();
         int skill2();
         int skill3();
@@ -27,11 +28,9 @@ class Priest : public Enchanter{
         virtual void rest();
     protected:
     private:
-        int _atkCost = 10;
-        int _atkDmg = 20;
-        int _skillCost[4] = {20, 30, 45, 70};
-        int _skillDmg[4] = {30, 50, 80, 120};
-        std::string _skillNames[4] = {"Knight Punch", "Impale", "Fury Slash", "Beheading"};
+        int _skillCost[4] = {20, 50, 60, 100};
+        int _skillDmg[4] = {-30, -100, 80, 400};
+        std::string _skillNames[4] = {"Light Heal", "Blessing", "Holy Water Throw", "Smite"};
 };
 
 #endif /* !PRIEST_HPP_ */
