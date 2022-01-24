@@ -11,10 +11,12 @@ using namespace std;
 
 Dragon::Dragon() : _hp(500), _power(250), _maxHp(500), _maxPower(250)
 {
+    cout << "The dragon sleeps in his cavern, protecting his treasures from greedy adventurers..." << endl;
 }
 
 Dragon::~Dragon()
 {
+    cout << "Bored of this land, the dragon gobbles up its treasures and flies away." << endl;
 }
 
 int Dragon::attack()
@@ -31,6 +33,7 @@ int Dragon::attack()
         return 0;
     }
     _power -= cost;
+    cout << "The dragon swipes its sharp claw at you !" << endl;
     return dmg;
 }
 
@@ -48,16 +51,17 @@ int Dragon::special()
         return 0;
     }
     _power -= cost;
+    cout << "You feel the heat on your face as the dragon breathes out a barrage of flames !!!" << endl;
     return dmg;
 }
 
 void Dragon::rest()
 {
     if (_hp <= 0) {
-        std::cout << "The dragon is out of combat !" << std::endl;
+        cout << "The dragon is out of combat !" << endl;
         return;
     }
-    std::cout << "The dragon stares at you menacingly but stays immobile." << std::endl;
+    cout << "The dragon stares at you menacingly but stays immobile." << endl;
     _power += 60;
     if (_power > _maxPower)
         _power = _maxPower;
@@ -66,14 +70,14 @@ void Dragon::rest()
 void Dragon::damage(int damage)
 {
     if (_hp <= 0) {
-        std::cout << "The dragon is out of combat !" << std::endl;
+        cout << "The dragon is out of combat !" << endl;
         return;
     }
     _hp -= damage;
     if (_hp <= 0) {
         _hp = 0;
-        std::cout << "The dragon is out of combat !" << std::endl;
+        cout << "The dragon is out of combat !" << endl;
     } else
-        std::cout << "The dragon winces in pain and takes " << damage << " damage." << std::endl;     
+        cout << "The dragon winces in pain and takes " << damage << " damage." << endl;     
 }
 
