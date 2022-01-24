@@ -18,10 +18,18 @@ class Enchanter : virtual public Peasant {
         }
         ~Enchanter();
         virtual int attack();
-        virtual int special();
+        int skill1();
+        int skill2();
+        int skill3();
+        int skill4();
         virtual void rest();
     protected:
     private:
+        int _atkCost = 10;
+        int _atkDmg = 20;
+        int _skillCost[4] = {20, 30, 45, 70};
+        int _skillDmg[4] = {30, 50, 80, 120};
+        std::string _skillNames[4] = {"Knight Punch", "Impale", "Fury Slash", "Beheading"};
 };
 
 #endif /* !ENCHANTER_HPP_ */

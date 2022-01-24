@@ -7,6 +7,27 @@
 
 #include "Priest.hpp"
 
+int Priest::skill1()
+{
+    return 0;
+}
+
+int Priest::skill2()
+{
+    return 0;
+}
+
+int Priest::skill3()
+{
+    return 0;
+}
+
+int Priest::skill4()
+{
+    return 0;
+}
+
+
 void Priest::rest()
 {
     if (_hp <= 0) {

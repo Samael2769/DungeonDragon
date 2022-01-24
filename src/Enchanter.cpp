@@ -21,7 +21,12 @@ int Enchanter::attack()
     return 0;
 }
 
-int Enchanter::special()
+int Enchanter::skill1()
+{
+    return 0;
+}
+
+int Enchanter::skill2()
 {
     if (_hp <= 0) {
         std::cout << _name << " is out of combat." << std::endl;
@@ -34,6 +39,16 @@ int Enchanter::special()
     _power -= 50;
     std::cout << _name << " cast a fireball." << std::endl;
     return 99;
+}
+
+int Enchanter::skill3()
+{
+    return 0;
+}
+
+int Enchanter::skill4()
+{
+    return 0;
 }
 
 void Enchanter::rest()

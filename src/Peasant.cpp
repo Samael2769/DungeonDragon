@@ -27,13 +27,28 @@ int Peasant::attack()
     return 5;
 }
 
-int Peasant::special()
+int Peasant::skill1()
 {
     if (_hp <= 0) {
         std::cout << _name << " is out of combat." << std::endl;
         return 0;
     }
     std::cout << _name << " doesn't know any special move." << std::endl;
+    return 0;
+}
+
+int Peasant::skill2()
+{
+    return 0;
+}
+
+int Peasant::skill3()
+{
+    return 0;
+}
+
+int Peasant::skill4()
+{
     return 0;
 }
 
