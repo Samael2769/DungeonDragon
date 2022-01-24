@@ -15,9 +15,19 @@ class Dragon : public IMob {
         Dragon();
         ~Dragon();
 
+        int getPower() const {return _power;}
+        int getHp() const {return _hp;}
+        
+        int attack();
+        int special();
+        void rest();
+        void damage(int damage);
     protected:
         int _hp;
         int _power;
+        const int _maxHp;
+        const int _maxPower;
+        const std::string _race = "Dragon";
     private:
 };
 

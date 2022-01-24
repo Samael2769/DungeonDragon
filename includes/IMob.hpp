@@ -8,6 +8,8 @@
 #ifndef IMOB_HPP_
 #define IMOB_HPP_
 
+#include <iostream>
+
 class IMob {
     public:
         virtual ~IMob() = default;
