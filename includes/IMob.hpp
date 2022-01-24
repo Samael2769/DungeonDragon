@@ -10,8 +10,7 @@
 
 class IMob {
     public:
-        IMob();
-        ~IMob();
+        virtual ~IMob() = default;
 
     protected:
     private:
