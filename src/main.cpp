@@ -17,11 +17,11 @@
 
 int main()
 {
-    ICharacter * peasant = new Peasant ("Gildas",  42);
+    ICharacter * enchanter = new Enchanter ("Gildas",  100);
     ICharacter * knight = new Knight ("Alpha", 50);
 
-    std::cout << combat(knight, peasant) << std::endl;
-    delete peasant;
+    std::cout << combat(knight, enchanter) << std::endl;
+    delete enchanter;
     delete knight;
     return 0;
 }

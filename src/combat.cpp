@@ -36,6 +36,17 @@ static void chose_attack(ICharacter *p, ICharacter *p2)
     }
 }
 
+static void mini_ia(ICharacter *p1, ICharacter *p2)
+{
+    std::cout << "-----------" << p2->getName() << " Attack" << "----------" << std::endl;
+    if (p2->getPower() > 50)
+        p1->damage(p2->special());
+    else if (p2->getPower() > 20)
+        p1->damage(p2->attack());
+    else
+        p2->rest();
+}
+
 bool combat(ICharacter *p1, ICharacter *p2)
 {
     std::cout << "You entered the territory of " << p1->getName() << std::endl;
@@ -45,6 +56,7 @@ bool combat(ICharacter *p1, ICharacter *p2)
         print_stats(p1);
         print_stats(p2);
         chose_attack(p1, p2);
+        mini_ia(p1, p2);
     }
     if (p1->getHp() == 0)
         return false;
