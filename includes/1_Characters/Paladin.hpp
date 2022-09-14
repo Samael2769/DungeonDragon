@@ -13,7 +13,7 @@
 
 class Paladin : public Knight, public Priest{
     public:
-        Paladin(const std::string &name, int power) : Peasant(name,power), Knight(name, power), Priest(name,power)
+        Paladin(std::string name, int power) : Peasant(name,power), Knight(name, power), Priest(name,power)
         {
             std::cout << _name << " fights for the light." << std::endl;
         }

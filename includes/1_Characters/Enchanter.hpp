@@ -12,7 +12,7 @@
 
 class Enchanter : virtual public Peasant {
     public:
-        Enchanter(const std::string &name, int power) : Peasant(name, power)
+        Enchanter(std::string name, int power) : Peasant(name, power)
         {
             std::cout << _name << " learns magic from his spellbook." << std::endl;
         }

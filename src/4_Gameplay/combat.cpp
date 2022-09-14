@@ -88,7 +88,7 @@ static void mini_ia(ICharacter *p1, ICharacter *p2)
             default:
                 break;
         }
-    else if (p2->getPower() > 20)
+    else if (p2->getPower() > 20 && p2->attack() > 0)
         p1->damage(p2->attack());
     else
         p2->rest();
@@ -96,12 +96,11 @@ static void mini_ia(ICharacter *p1, ICharacter *p2)
 
 bool combat(ICharacter *p1, ICharacter *p2)
 {
-    std::cout << "You entered the territory of " << p1->getName() << std::endl;
-    
+    std::cout << "You entered the territory of " << p2->getName() << std::endl;
 
     while (p1->getHp() > 0 && p2->getHp() > 0) {
-        print_stats(p1);
         print_stats(p2);
+        print_stats(p1);
         chose_attack(p1, p2);
         mini_ia(p1, p2);
     }

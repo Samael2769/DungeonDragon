@@ -12,7 +12,7 @@
 
 class Knight : virtual public Peasant {
     public:
-        Knight(const std::string &name, int power) : Peasant(name,power){
+        Knight(std::string name, int power) : Peasant(name,power){
             _hp = 100;
             std::cout << _name << " vows to protect the kingdom." << std::endl;
         }

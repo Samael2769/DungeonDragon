@@ -12,7 +12,7 @@
 
 class Priest : public Enchanter{
     public:
-        Priest(const std::string &name, int power) : Peasant(name,power), Enchanter(name, power)
+        Priest(std::string name, int power) : Peasant(name,power), Enchanter(name, power)
         {
             std::cout << _name << " enters in the order." << std::endl;
         }

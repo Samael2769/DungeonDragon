@@ -13,14 +13,14 @@
 
 class Peasant : public ICharacter {
     public:
-        Peasant(const std::string &name, int power) : _power(power),  _hp(100), _maxPower(power), _maxHp(100), _name(name)
+        Peasant(std::string name, int power) : _power(power),  _hp(100), _maxPower(power), _maxHp(100), _name(name)
         {
             std::cout << _name << " goes for an adventure." << std::endl;
             if (_power > 100)
                 _power = 100;
         }
         ~Peasant();
-        const std::string &getName() const {return _name;}
+        std::string getName() const {return _name;}
         int getPower() const{return _power;}
         int getHp() const {return _hp;}
         const int getMaxPower() const{return _maxPower;}
@@ -42,7 +42,7 @@ class Peasant : public ICharacter {
     int _hp;
     const int _maxPower;
     const int _maxHp;
-    const std::string &_name;
+    std::string _name;
     private:
         int _atkCost = 1;
         int _atkDmg = 5;

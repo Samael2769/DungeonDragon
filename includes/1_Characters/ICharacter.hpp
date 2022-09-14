@@ -24,7 +24,7 @@ class ICharacter {
         virtual int skill4() = 0;
         virtual void rest() = 0;
         virtual void damage(int damage) = 0;
-        virtual const std::string &getName() const = 0;
+        virtual std::string getName() const = 0;
         virtual int getPower() const = 0;
         virtual int getHp() const = 0;
         virtual const int getMaxPower() const = 0;
