@@ -78,18 +78,18 @@ void Peasant::damage(int damage)
         std::cout << _name << " takes " << damage << " damage." << std::endl;     
 }
 
-void Peasant::drink(const IPotion &potion)
+void Peasant::drink(const IPotion  * potion)
 {
     std::cout << _name << " drinks a mysterious potion." << std::endl;
-    switch (potion.getType()) {
+    switch (potion->getType()) {
         case 0:
-            _hp += potion.getValue();
+            _hp += potion->getValue();
             break;
         case 1:
-            _power += potion.getValue();
+            _power += potion->getValue();
             break;
         case 2:
-            _hp += potion.getValue();
+            _hp += potion->getValue();
             break;
         default:
             break;

@@ -8,6 +8,10 @@
 #include "Rooms.hpp"
 #include "Goblin.hpp"
 #include "Dragon.hpp"
+#include "IPotion.hpp"
+#include "PoisonPotion.hpp"
+#include "HealthPotion.hpp"
+#include "PowerPotion.hpp"
 
 Rooms::Rooms(int type, ICharacter * player)
 {
@@ -50,12 +54,27 @@ void Rooms::Boss()
 
 void Rooms::Treasure()
 {
+    IPotion *potion;
+    int type = random() % 3;
+    switch (type) {
+        case 0:
+            potion = new HealthPotion();
+            break;
+        case 1:
+            potion = new PowerPotion();
+            break;
+        case 2:
+            potion = new PoisonPotion();
+            break;
+    }
+    _player->drink(potion);
     std::cout << "Treasure" << std::endl;
 }
 
 void Rooms::Trap()
 {
     std::cout << "Trap" << std::endl;
+    _player->damage(10);
 }
 
 void Rooms::Exit()

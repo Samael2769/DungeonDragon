@@ -33,7 +33,7 @@ class Peasant : public ICharacter {
         int skill4();
         virtual void rest();
         void damage(int damage);
-        void drink(const IPotion &potion);
+        void drink(const IPotion * potion);
         void drink(const PoisonPotion &potion);
         void drink(const HealthPotion &potion);
         void drink(const PowerPotion &potion);
