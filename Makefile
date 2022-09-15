@@ -25,6 +25,8 @@ SRC_FILES_MAIN	=	main.cpp\
 					3_Items/PoisonPotion.cpp\
 					3_Items/PowerPotion.cpp\
 					4_Gameplay/combat.cpp\
+					4_Gameplay/Rooms.cpp\
+					4_Gameplay/Story.cpp\
 
 TEST_FILES	=\
 
