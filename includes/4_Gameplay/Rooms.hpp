@@ -17,7 +17,7 @@
 
 class Rooms {
     public:
-        Rooms(int type);
+        Rooms(int type, ICharacter * player);
         ~Rooms();
         void Nothing();
         void Monster();
@@ -30,6 +30,7 @@ class Rooms {
     protected:
     private:
         int type;
+        ICharacter * _player;
 };
 
 #endif /* !ROOMS_HPP_ */

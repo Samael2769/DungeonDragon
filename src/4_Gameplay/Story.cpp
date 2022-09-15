@@ -58,6 +58,7 @@ void Story::startStory()
 void Story::runStory()
 {
     int type = random() % 5;
+    int side = 0;
     int tours = 0;
 
     while (1) {
@@ -66,10 +67,17 @@ void Story::runStory()
             type = random() % 6;
             continue;
         }
-        Rooms room(type);
+        Rooms room(type, _player);
         room.run();
         if (type == 5 && tours > 5)
             break;
         tours++;
+        std::cout << std::endl;
+        std::cout << "Do you want to go: " << std::endl;
+        std::cout << "1. Left" << std::endl;
+        std::cout << "2. Right" << std::endl;
+        std::cout << "3. Forward" << std::endl;
+        std::cout << std::endl;
+        std::cin >> side;
     }
 }

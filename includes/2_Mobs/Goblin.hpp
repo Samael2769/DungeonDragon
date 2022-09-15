@@ -19,6 +19,7 @@ class Goblin : public IMob {
         int getHp() const {return _hp;}
         const int getMaxPower() const{return _maxPower;}
         const int getMaxHp() const {return _maxHp;}
+        std::string getName() const {return _race;}
 
         int attack();
         int skill1();
@@ -28,7 +29,7 @@ class Goblin : public IMob {
         void rest();
         void damage(int damage);
     protected:
-        const std::string _race;
+        std::string _race;
         int _power;
         int _hp;
         const int _maxPower;

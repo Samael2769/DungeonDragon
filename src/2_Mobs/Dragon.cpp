@@ -9,7 +9,7 @@
 
 using namespace std;
 
-Dragon::Dragon() : _hp(500), _power(250), _maxHp(500), _maxPower(250)
+Dragon::Dragon() : _hp(500), _power(250), _maxHp(500), _maxPower(250), _race("Dragon")
 {
     cout << "The dragon sleeps in his cavern, protecting his treasures from greedy adventurers..." << endl;
 }

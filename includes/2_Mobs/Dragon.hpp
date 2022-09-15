@@ -19,6 +19,7 @@ class Dragon : public IMob {
         int getHp() const {return _hp;}
         const int getMaxPower() const{return _maxPower;}
         const int getMaxHp() const {return _maxHp;}
+        std::string getName() const {return _race;}
         
         int attack();
         int skill1();
@@ -32,7 +33,7 @@ class Dragon : public IMob {
         int _power;
         const int _maxHp;
         const int _maxPower;
-        const std::string _race = "Dragon";
+        std::string _race;
     private:
         int _atkCost = 10;
         int _atkDmg = 20;

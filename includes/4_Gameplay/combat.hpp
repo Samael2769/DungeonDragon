@@ -12,5 +12,6 @@
 #include "IMob.hpp"
 
 bool combat(ICharacter *p1, ICharacter *p2);
+bool combat(ICharacter *p1, IMob *p2);
 
 #endif /* !COMBAT_HPP_ */
